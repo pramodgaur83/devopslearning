@@ -1,1 +1,40 @@
-
+------Steps to install latest version of Git on CentOS ----------
+vi /etc/yum.repos.d/wandisco-git.repo
+rpm --import http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco
+sudo yum install git
+git --version
+-------------------------------------------------------------------------------------
+git config --global user.name "Pramod Gaur"
+git config --global user.email "parmod.gaur@gmail.com"
+git config --list
+cat ~/.gitconfig
+git init -- Initialized empty Git repository in /root/git/repo/.git/
+ls -lrt /root/git/repo/.git/
+git status
+vi demo.txt
+git add demo.txt
+git status
+git commit -m "First Commit"
+vi demo.txt -- Add one more line
+git status
+git add --all
+git commit -m "Second Commit"
+git log -- listing of commits on a master branch including details with logs, type the following
+git branch -- A Git repository can have multiple branch including master branch. To know your git branch, issue the following on your terminal
+vi another.txt
+git add another.txt
+git commit -m "1st commit"
+git rm another.txt
+git commit -m "testing git remove"
+git reset --If you want to reset your index and working directory to the state of your last commit
+git stash -- If made some changes in one of your file but you don’t want to commit it to the repo then you can stash it and also you can push it later as well.
+git diff 7779f4ff430473c8453a0cc75ca0f7671488d291 f017565a67aae22f928a975d65e3fa52643a114e
+-------------------------------------------------------------------------------------------------------------------------------
+git clone https://github.com/pramodgaur83/devopslearning.git
+vi README.md
+git status
+git add --all
+git commit -m "adding README.md"
+git status
+git push -u origin master
+git pull -u origin master
