@@ -37,4 +37,4 @@ git add --all
 git commit -m "adding README.md"
 git status
 git push -u origin master
-git pull -u origin master
+git pull origin master
